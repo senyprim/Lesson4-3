@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators(object):
+class MainPageLocators:
     pass
 
 
@@ -13,6 +13,14 @@ class ProductPageLocators:
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
 
 
-class BasePageLocators(object):
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    CART_PAGE_LINK = (By.CSS_SELECTOR, ".basket-mini a.btn.btn-default")
+
+
+class CartPageLocators:
+    PRODUCT_IN_BASKET=(By.CSS_SELECTOR,".basket-items .row h3 a")
+    MESAGE_EMPTY_BASKET=(By.CSS_SELECTOR,".content #content_inner p")
+
+
