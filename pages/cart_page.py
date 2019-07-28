@@ -1,7 +1,9 @@
 from .locators import CartPageLocators
 from .base_page import BasePage
 
+
 class CartPage(BasePage):
+
     def should_not_be_disappeared_product(self):
         assert self.is_disappeared(*CartPageLocators.PRODUCT_IN_BASKET), "Корзина долна быть пуста"
 

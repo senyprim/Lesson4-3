@@ -4,9 +4,7 @@ from pages.locators import LoginPageLocators
 
 class LoginPage(BasePage):
 
-
-
-    def register_new_user(self,email, password):
+    def register_new_user(self, email, password):
         self.browser.implicitly_wait(3)
         self.browser.find_element(*LoginPageLocators.EMAIL_REGISTRATION).send_keys(email)
         self.browser.find_element(*LoginPageLocators.PASSWORD_REGISTRATION).send_keys(password)

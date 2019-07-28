@@ -21,19 +21,24 @@ class ProductPage(BasePage):
         return self.browser.find_element(*ProductPageLocators.PRICE_TO_BASKET).text
 
     def should_be_product_name_in_basket(self):
-        assert self.get_product_name() == self.get_added_product_to_basket(), f"Товар со страницы  не соответствует товару в корзине"
+        assert self.get_product_name() == self.get_added_product_to_basket(), \
+            f"Товар со страницы  не соответствует товару в корзине"
 
     def should_be_product_cost_in_basket(self):
-        assert self.get_product_price() == self.get_price_to_basket(), f"Цена со страницы не соответствует цене в корзине"
+        assert self.get_product_price() == self.get_price_to_basket(), \
+            f"Цена со страницы не соответствует цене в корзине"
 
     def should_be_button_add_to_basket(self):
-        assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET_BUTTON), "Button add to basket is not presented"
+        assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET_BUTTON), \
+            "Button add to basket is not presented"
 
     def should_not_be_success_message(self):
-        assert self.is_not_element_present(*ProductPageLocators.ADDED_PRODUCT_NAME_TO_BASKET), "Success message is presented, but should not be"
+        assert self.is_not_element_present(*ProductPageLocators.ADDED_PRODUCT_NAME_TO_BASKET), \
+            "Success message is presented, but should not be"
 
     def should_not_be_disappeared_message(self):
-        assert self.is_disappeared(*ProductPageLocators.ADDED_PRODUCT_NAME_TO_BASKET), "Success message is presented, but should not be"
+        assert self.is_disappeared(*ProductPageLocators.ADDED_PRODUCT_NAME_TO_BASKET), \
+            "Success message is presented, but should not be"
 
 
 
