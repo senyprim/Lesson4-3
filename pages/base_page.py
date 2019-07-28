@@ -9,14 +9,19 @@ from .locators import BasePageLocators
 
 import math
 
+
 class BasePage(object):
     def __init__(self,browser,url,time_out=10):
+        print("Запуск конструктора base")
         self.browser=browser
         self.url=url
         self.time_out=time_out
 
     def open(self):
         self.browser.get(self.url)
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented, probably unauthorised user"
 
     def is_element_present(self,by,selector):
         try:

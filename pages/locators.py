@@ -14,13 +14,21 @@ class ProductPageLocators:
 
 
 class BasePageLocators:
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK = (By.CSS_SELECTOR, "#registration_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     CART_PAGE_LINK = (By.CSS_SELECTOR, ".basket-mini a.btn.btn-default")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class CartPageLocators:
-    PRODUCT_IN_BASKET=(By.CSS_SELECTOR,".basket-items .row h3 a")
-    MESAGE_EMPTY_BASKET=(By.CSS_SELECTOR,".content #content_inner p")
+    PRODUCT_IN_BASKET = (By.CSS_SELECTOR, ".basket-items .row h3 a")
+    MESAGE_EMPTY_BASKET = (By.CSS_SELECTOR, ".content #content_inner p")
 
 
+class LoginPageLocators:
+    EMAIL_REGISTRATION = (By.CSS_SELECTOR, "#id_registration-email")
+    PASSWORD_REGISTRATION = (By.CSS_SELECTOR, "#id_registration-password1")
+    PASSWORD2_REGISTRATION = (By.CSS_SELECTOR, "#id_registration-password2")
+    BUTTON_REGISTRATION = (By.NAME, "registration_submit")
+    USER_NAME_LOGIN = (By.CSS_SELECTOR, "#id_login-username")
+    PASSWORD_LOGIN = (By.CSS_SELECTOR, "#id_login-password")

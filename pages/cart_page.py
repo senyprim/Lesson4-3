@@ -10,7 +10,3 @@ class CartPage(BasePage):
 
     def should_be_success_message(self):
         assert self.is_element_present(*CartPageLocators.MESAGE_EMPTY_BASKET), "В корзине нет сообщения пустой корзины"
-
-
-
-
